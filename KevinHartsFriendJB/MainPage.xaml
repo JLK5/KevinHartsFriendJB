@@ -12,24 +12,33 @@
                 HeightRequest="185"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a race car number eight" />
-
             <Label
-                Text="Hello, World!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-
-            <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
-
+                Text="Pick a die!"/>
+            <RadioButton 
+                Content="D4"
+                x:Name="d4"/>
+            <RadioButton 
+                Content="D6"
+                x:Name="d6"
+                IsChecked="True"/>
+            <RadioButton 
+                Content="D10"
+                x:Name="d10"/>
+            <RadioButton 
+                Content="D12"
+                x:Name="d12"/>
             <Button
                 x:Name="CounterBtn"
-                Text="Click me" 
+                Text="Roll a die" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+            <Label
+                x:Name="rollValue"
+                Text="Roll result"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                />
         </VerticalStackLayout>
     </ScrollView>
 

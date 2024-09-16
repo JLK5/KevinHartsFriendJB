@@ -12,10 +12,26 @@
         private void OnCounterClicked(object sender, EventArgs e)
         {
             Random r = new Random();
-            int roll = r.Next(1, 7);
-            CounterBtn.Text = "Rolled Number: " + roll.ToString();
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            if (d4.IsChecked == true)
+            {
+                int dice = r.Next(1, 5);
+                rollValue.Text = "Rolled Number: " + dice.ToString();
+            }
+            else if (d6.IsChecked == true)
+            {
+                int dice = r.Next(1, 7);
+                rollValue.Text = "Rolled Number: " + dice.ToString();
+            }
+            else if (d10.IsChecked == true)
+            {
+                int dice = r.Next(1, 11);
+                rollValue.Text = "Rolled Number: " + dice.ToString();
+            }
+            else if (d12.IsChecked == true)
+            {
+                int dice = r.Next(1, 13);
+                rollValue.Text = "Rolled Number: " + dice.ToString();
+            }
         }
     }
 
