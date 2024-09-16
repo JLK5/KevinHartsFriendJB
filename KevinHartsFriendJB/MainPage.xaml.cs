@@ -8,6 +8,13 @@
         {
             InitializeComponent();
         }
+        private void OnRadioClicked(object sender, EventArgs e)
+        {
+            RadioButton radioButton = (RadioButton)sender;
+            string value = radioButton.Value.ToString();
+            Dice.Source = value + ".png";
+            rollValue.Text = "Rolled Number";
+        }
 
         private void OnCounterClicked(object sender, EventArgs e)
         {

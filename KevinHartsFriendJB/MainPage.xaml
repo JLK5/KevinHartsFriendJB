@@ -8,7 +8,8 @@
             Padding="30,0"
             Spacing="25">
             <Image
-                Source="dotnet_bot.png"
+                x:Name="Dice"
+                Source="d6.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a race car number eight" />
@@ -16,17 +17,25 @@
                 Text="Pick a die!"/>
             <RadioButton 
                 Content="D4"
-                x:Name="d4"/>
+                x:Name="d4"
+                CheckedChanged="OnRadioClicked"
+                Value="d4"/>
             <RadioButton 
                 Content="D6"
                 x:Name="d6"
-                IsChecked="True"/>
+                IsChecked="True"
+                CheckedChanged="OnRadioClicked"
+                Value="d6"/>
             <RadioButton 
                 Content="D10"
-                x:Name="d10"/>
+                x:Name="d10"
+                CheckedChanged="OnRadioClicked"
+                Value="d10"/>
             <RadioButton 
                 Content="D12"
-                x:Name="d12"/>
+                x:Name="d12"
+                CheckedChanged="OnRadioClicked"
+                Value="d12"/>
             <Button
                 x:Name="CounterBtn"
                 Text="Roll a die" 
